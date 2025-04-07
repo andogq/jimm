@@ -44,6 +44,9 @@ outputs:
   ca-cert:
     description: 'The CA certificate used to genereate the JIMM server cert.'
     value: ${{ steps.fetch-cert.outputs.jimm-ca }}
+  lxd-controller:
+    description: 'The LXD controller name'
+    value: ${{ steps.lxd-controller.outputs.name }}
 
 runs:
   using: "composite"
